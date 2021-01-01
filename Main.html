@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IKBOL STATS CALCULATOR</title>
+    <style>
+        table {
+            border-collapse:collapse;
+        }
+        td{
+            padding:5px 10px;
+            text-align:center;
+        }
+        input{
+            border:none;
+        }
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td colspan="3">
+                <input type="text" id="ban">
+            <td>방문</td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="text" id="gae">
+            <td>게시글</td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="text" id="dat">
+            <td>댓글</td>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <input type="text" id="result">
+            <td >
+                <button onclick="stat();">계산</button>
+            </td>
+        </tr>
+    </table>
+    <script>
+        var stat=function(){
+            var a=document.querySelector("#ban").value;
+            var b=document.querySelector("#gae").value;
+            var c=document.querySelector("#dat").value;
+            var result=parseFloat(a)/70+parseFloat(b)/30+parseFloat(c)/350;
+            document.querySelector("#result").value=result;
+        }
+    </script>
+</body>
+            
